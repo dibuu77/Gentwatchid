@@ -499,6 +499,20 @@ h1.headline .accent { color: var(--orange); }
     align-items: flex-start;
     gap: 14px;
   }
+  .filter-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .filter-buttons button {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
 
   .filter-container {
     justify-content: space-between;
