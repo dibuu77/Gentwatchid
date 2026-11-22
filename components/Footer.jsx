@@ -46,8 +46,8 @@ export default function Footer() {
           <h4 className="footer-title">Layanan Admin</h4>
           <p className="footer-contact">
             <b>WhatsApp Admin:</b><br />
-            <a href="https://wa.me/6281320718854" target="_blank" rel="noreferrer">
-              +62 813-2071-8854
+            <a href="https://wa.me/6289524895412" rel="noreferrer">
+              +62 895-2489-5412
             </a>
           </p>
           <p className="footer-contact" style={{ marginTop: '12px' }}>
