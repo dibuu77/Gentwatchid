@@ -1,0 +1,243 @@
+
+/* ===================== MAIN FOOTER ===================== */
+
+.main-footer {
+  width: 100%;
+  box-sizing: border-box;
+  background: #000;
+  color: #f5f2e9;
+  border-top: 1px solid #2d3530;
+  margin-top: 60px;
+  padding-top: 55px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Batasi lebar konten footer */
+.main-footer .wrap {
+  width: min(1200px, calc(100% - 64px));
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ===================== FOOTER GRID ===================== */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 0.8fr 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+  padding-bottom: 45px;
+}
+
+/* ===================== BRAND ===================== */
+
+.footer-brand {
+  min-width: 0;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+}
+
+.footer-logo img {
+  display: block;
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-brand .footer-desc {
+  max-width: 340px;
+  margin: 18px 0 0;
+  color: #a0a59c;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ===================== LINKS ===================== */
+
+.footer-links {
+  min-width: 0;
+}
+
+.footer-title {
+  margin: 0 0 18px;
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: #a0a59c;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ff751f;
+}
+
+/* ===================== ADMIN CONTACT ===================== */
+
+.footer-contact {
+  margin: 0;
+  color: #a0a59c;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer-contact + .footer-contact {
+  margin-top: 14px !important;
+}
+
+.footer-contact b {
+  color: #f5f2e9;
+  font-weight: 600;
+}
+
+.footer-contact a {
+  color: #ff751f;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  color: #ff984f;
+}
+
+/* ===================== COPYRIGHT ===================== */
+
+.footer-bottom {
+  border-top: 1px solid #2d3530;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #858b80;
+}
+
+.footer-bottom p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ===================== TABLET ===================== */
+
+@media (max-width: 860px) {
+  .main-footer {
+    padding-top: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px 40px;
+  }
+
+  .footer-brand .footer-desc {
+    max-width: 400px;
+  }
+}
+
+/* ===================== MOBILE ===================== */
+
+@media (max-width: 540px) {
+  .main-footer {
+    margin-top: 40px;
+    padding-top: 35px;
+  }
+
+  .main-footer .wrap {
+    width: calc(100% - 40px);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 20px;
+    padding-bottom: 32px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand .footer-desc {
+    max-width: 100%;
+  }
+
+  .footer-title {
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .footer-links a,
+  .footer-contact {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding: 17px 10px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+}
+
+/* Override batas lebar dari CSS global */
+.main-footer .wrap {
+  width: calc(100% - 100px) !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box;
+}
+
+.main-footer .footer-grid {
+  grid-template-columns: 1.6fr 0.8fr 0.8fr 1.2fr;
+  gap: 55px;
+  justify-content: space-between;
+}
+
+/* Pastikan footer tidak terpengaruh layout global */
+.main-footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .main-footer .wrap {
+    width: calc(100% - 48px) !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .main-footer .wrap {
+    width: calc(100% - 40px) !important;
+  }
+}

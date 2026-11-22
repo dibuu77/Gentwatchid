@@ -1,0 +1,154 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f6f4ed;
+  color: #202820;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  padding: 48px 24px 72px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.pageHeader { margin-bottom: 28px; }
+.eyebrow, .priceEyebrow {
+  display: inline-block;
+  color: #718071;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+.title {
+  margin: 10px 0 8px;
+  color: #1e3024;
+  font-size: clamp(28px, 4vw, 36px);
+  line-height: 1.15;
+  font-weight: 750;
+}
+.description {
+  max-width: 620px;
+  margin: 0;
+  color: #69736a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.form { display: flex; flex-direction: column; gap: 18px; }
+.section, .priceSection {
+  padding: 26px;
+  background: #fffefa;
+  border: 1px solid #e8e4d9;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(38, 61, 48, .035);
+}
+.sectionHeader { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 23px; }
+.sectionNumber {
+  display: grid;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  background: #edf1e9;
+  color: #314c38;
+  font-size: 12px;
+  font-weight: 800;
+}
+.sectionTitle { margin: 0; color: #263d30; font-size: 17px; line-height: 1.4; font-weight: 700; }
+.sectionDescription { margin: 4px 0 0; color: #7b8279; font-size: 12px; line-height: 1.6; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 16px; }
+.formGroup { display: flex; min-width: 0; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+.formGroup:last-child { margin-bottom: 0; }
+.label { color: #344438; font-size: 12px; font-weight: 650; }
+.input, .select, .textarea, .priceInput {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #deded4;
+  border-radius: 9px;
+  background: #fff;
+  color: #26342a;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.input, .select { min-height: 43px; padding: 10px 12px; }
+.textarea { min-height: 92px; padding: 11px 12px; resize: vertical; line-height: 1.6; }
+.input::placeholder, .textarea::placeholder, .priceInput::placeholder { color: #a4aaa1; }
+.input:focus, .select:focus, .textarea:focus, .priceInput:focus {
+  border-color: #637b66;
+  box-shadow: 0 0 0 3px rgba(99, 123, 102, .12);
+}
+.checkboxGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; margin-bottom: 22px; }
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 0 12px;
+  border: 1px solid #e7e8df;
+  border-radius: 9px;
+  background: #fff;
+  color: #465248;
+  font-size: 13px;
+  cursor: pointer;
+}
+.checkboxInput { width: 16px; height: 16px; accent-color: #314c38; cursor: pointer; }
+.priceSection {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, .8fr);
+  align-items: center;
+  gap: 24px;
+  background: #f0f2e9;
+  border-color: #dfe5d9;
+}
+.priceEyebrow { margin-bottom: 7px; }
+.priceInputWrap {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 13px;
+  border: 1px solid #d6dfd3;
+  border-radius: 10px;
+  background: #fff;
+}
+.currency { margin-right: 9px; color: #617060; font-size: 14px; font-weight: 700; }
+.priceInput { min-height: 44px; padding: 8px 0; border: 0; box-shadow: none !important; }
+.submitArea { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; padding-top: 4px; }
+.submitNote { align-self: stretch; margin: 0; color: #7b8279; font-size: 12px; line-height: 1.6; }
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 10px;
+  background: #263d30;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
+}
+.submitBtn:hover { background: #1c3024; transform: translateY(-1px); }
+.submitBtn:focus-visible { outline: 3px solid rgba(38, 61, 48, .25); outline-offset: 3px; }
+
+@media (max-width: 640px) {
+  .main { padding: 32px 15px 48px; }
+  .section, .priceSection { padding: 20px 17px; border-radius: 13px; }
+  .grid2, .priceSection { grid-template-columns: 1fr; gap: 15px; }
+  .checkboxGrid { grid-template-columns: 1fr; }
+  .submitArea { align-items: stretch; }
+  .submitBtn { width: 100%; }
+}
