@@ -491,6 +491,8 @@ h1.headline .accent { color: var(--orange); }
   .wrap { padding: 0 16px; }
   .watchBg { right: -35%; opacity: 0.25; }
   .products { padding: 38px 0 55px; }
+  .hero {padding: 24px 0 0px;}
+  .readout {padding: 10px 0;}
 
   .prod-head {
     flex-direction: column;
